@@ -1,0 +1,22 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+{% load boost %}
+    
+    <div class="question_form">
+        <div class="answer_result">
+            <h2>結果発表!!</h2>
+            {% for res , ques in result|zip:question %}
+                <a href="{% url 'practice_question' ques.slug %}">
+                <p>問題{{ forloop.counter }} : {{ques.title}} : 
+                {% if res == 1 %}
+                    正解
+                {% else %}
+                    不正解
+                {% endif %}
+                </p></a>
+            {% endfor %}
+        </div>
+        <a class="go_home" href="/home/">ホームに戻る</a>
+    </div>
+
+{% endblock %}

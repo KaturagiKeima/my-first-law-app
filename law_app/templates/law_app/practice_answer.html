@@ -1,0 +1,58 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+
+    {% if end == 0 %}
+    <div class="question_form">
+        <form action="/practice_answer/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>問題{{number}} : {{question.title}}</p>
+            <h3>{{question.question|linebreaksbr}}</h3><br>
+            <div class="answer_form">
+                {% if correct == 1 %}
+                    <h2>正解</h2>
+                {% else %}
+                    <h2>不正解</h2>
+                {% endif %}
+                <p>あなたの回答 ： {{answer}}</p>
+                <p>答え　：　{{question.answer}}</p>
+                {% if question.explanation %}
+                    <p>解説　:  {{question.explanation}}</p>
+                {% endif %}
+            </div>
+            <div class="next_form">
+                <a class="next_input" href="{% url 'practice_question' next.slug %}">次の問題</a><br>
+            </div>
+            {% if number != 1 %}
+                <a class="before_input" href="{% url 'practice_question' before.slug %}">前の問題へ戻る</a>
+            {% endif %}
+        </form>
+    {% else %}
+    <div class="question_form">
+        <form action="/practice_answer/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>問題{{number}} : {{question.title}}</p>
+            <h3>{{question.question|linebreaksbr}}</h3><br>
+            <div class="answer_form">
+                {% if correct == 1 %}
+                    <h2>正解</h2>
+                {% else %}
+                    <h2>不正解</h2>
+                {% endif %}
+                <p>あなたの回答 ： {{answer}}</p>
+                <p>答え　：　{{question.answer}}</p>
+                {% if question.explanation %}
+                    <p>解説　:  {{question.explanation}}</p>
+                {% endif %}
+            </div>
+            <div class="next_form">
+                <a class="next_input" href="/practice_end">終わり</a><br>
+            </div>
+            {% if number != 1 %}
+                <a class="before_input" href="{% url 'practice_question' before.slug %}">前の問題へ戻る</a>
+            {% endif %}
+        </form>
+    {% endif %}    
+    </div>
+
+
+{% endblock %}

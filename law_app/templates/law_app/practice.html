@@ -1,0 +1,30 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+
+<div class="choice">
+    <span>問題の分野の指定</span>
+    </div>
+    <div class="choice2">
+
+<div class="gen_check">
+    <form class="" action="/practice_main/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    問題数<input type="number" name="ques_sum_number" min="1" max="10" value="5" required><br>
+    <p>内容</p>
+    {% for field in fields %}
+        <label><input type="checkbox" name="all_field" value="{{field.field_name}}" checked>{{field.field_name}}</label>
+        <br>
+    {% endfor %}
+    <p>詳細</p>
+    {% for gen in generation %}
+        <label><input type="checkbox" name="all_generation" value="{{gen.generation}}" checked>第{{gen.generation}}回：{{gen.title}}</label>
+        <br>
+    {% endfor %}
+    <p>{{check}}</p>
+    <input type="submit" name="all_field" value="これで始める">
+    </form>
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+
+    
+    <div class="question_form">
+        <form action="/practice_answer/" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>問題{{number}} : {{question.title}}</p>
+            <h3>{{question.question|linebreaksbr}}</h3><br>
+            <div class="ans_form">
+                {{ans_form}}
+                <input type="submit" name="input_answer" value="回答"><br><br>
+            </div>
+            {% if number != 1 %}
+                <a class="before_input" href="{% url 'practice_question' before.slug %}">前の問題へ戻る</a>
+            {% endif %}
+        </form>
+    </div>
+
+
+{% endblock %}

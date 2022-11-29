@@ -1,0 +1,267 @@
+body{
+    background-color: #353144;
+    font-family: sans-serif;
+}
+
+Result Skip Results Iframe
+EDIT ON
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+
+.menubar_main ul{
+    padding: right;
+}
+
+.menubar_main a{
+  vertical-align: middle;
+  text-align: right;
+}
+
+.menubar {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: right;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.menubar_main img{
+  display: inline-block;
+  width: 8%;
+}
+
+.main_title{
+  border-bottom: solid 3px #dad0ff;
+}
+
+.menubar_main h1{
+  display: inline-block;
+  vertical-align: text-bottom;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  color: #dad0ff;
+}
+
+.menu_name{
+  text-align: right;
+}
+
+.menubar * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.menubar li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+
+.menubar a {
+  padding: 0.3em 0;
+  color: white;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.menubar a:before,
+.menubar a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.menubar a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+.menubar a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+.menubar li:hover a,
+.menubar .current a {
+  transform: translateY(100%);
+}
+
+.main_image img{
+  position: relative;
+  height: 30%;
+  width: 100%;
+}
+
+.main_image h2{
+  position: absolute;
+  color: #dad0ff;
+  font-family: serif;
+  font-size: x-large;
+  top: 27%;
+  right: 1%;
+}
+
+.que p {
+  color: white;
+}
+
+.gen_check {
+  color: white;
+}
+
+.choice{
+  height: 12px;
+}
+
+.choice span{
+  margin-left:30%;
+  padding:6px 5px;
+  background:white;
+  font-weight:bold;
+  border-radius:5px;
+}
+
+.choice2{
+  border:7px solid white;
+  padding:25px;
+  margin: 0 auto;
+  font-size:1em;
+  width: 45%;
+  border-radius:5px;
+}
+
+.start_count h1{
+  color: white;
+  text-align: center;
+}
+
+.question_form{
+  border:7px solid green;
+  padding:25px;
+  margin: 0 auto;
+  font-size:1em;
+  width: 45%;
+  border-radius:5px;
+}
+
+.question_form h3{
+  color: white;
+}
+
+.question_form p{
+  color: white;
+}
+
+.ans_form{
+  text-align: right;
+}
+
+.question_form button{
+  background-color: blue;
+  color: white;
+}
+
+.question_form{
+  color: white;
+}
+
+.answer_form h2{
+  text-align: center;
+  color: red;
+}
+
+.question_start{
+  text-align: center;
+  margin: 17% 41%;
+  background-color: white;
+}
+
+.question_start h1 a{
+  color: #ff0101;
+}
+
+.next_form{
+  text-align: right;
+}
+
+.next_input{
+  color: #b2fdc5;
+}
+
+.before_input{
+  color: rgb(211, 211, 212);
+}
+
+.go_home{
+  color: rgb(246, 162, 252);
+}
+
+.production_form{
+  border:7px solid rgb(251, 255, 0);
+  padding:25px;
+  margin: 0 auto;
+  font-size:1em;
+  width: 55%;
+  border-radius:5px;
+}
+
+.production_form p{
+  color: white;
+}
+
+.production_start h1{
+  color: red;
+}
+
+.production_start_a{
+  text-align: center;
+  margin: 17% 36%;
+  background-color: white;
+}
+
+.production_start_a a{
+  color: red;
+}
+
+.production_end{
+  text-align: center;
+}
+
+.production_end a{
+  color: rgb(77, 255, 0);
+}
+
+.production_answer_p p{
+  color: rgb(255, 0, 0);
+}
+
+.create_form{
+  text-align: center;
+  color: white;
+}
+
+.contact_form{
+  color: white;
+  padding:25px;
+  margin: 0 auto;
+  font-size:1em;
+  width: 55%;
+  border-radius:5px;
+}
+
+.contact_input{
+  text-align: right;
+}
+
+.contact_end{
+  color: red;
+}

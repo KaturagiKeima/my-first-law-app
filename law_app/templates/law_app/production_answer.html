@@ -1,0 +1,22 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+{% load boost %}
+
+    <div class="production_form">
+        {% for i , ques in number|zip:question %}
+            <p>問題{{ forloop.counter }}</p>
+            <p>{{ques.question|linebreaksbr}}</p>
+            <div class="production_answer_p">
+                <p>答え：{{ques.answer}}</p>
+            </div>
+            {% if ques.explanation %}
+                <p>解説：{{ques.explanation}}</p>
+            {% endif %}
+            <br>
+        {% endfor %}
+        <div class="production_end">
+            <p><a href="/home/">ホームへ戻る</a></p>
+        </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+
+    <div class="contact_form">
+        <div class="contact_title">
+            <h1>お問い合わせフォーム</h1>
+            <p>以下のようなことなど何でも書き込んでください</p>
+            <ul>
+                <li>問題の間違え</li>
+                <li>追加して欲しい問題</li>
+                <li>問題で追加してほしい解説や補足説明</li>
+                <li>機能の改善点</li>
+                <li>追加して欲しい機能</li>
+                <li>雑談</li>
+            </ul>
+        </div>
+        {% if send == 1 %}
+            <div class="contact_end">
+                <p>送信完了しました。</p>
+                <p>ご協力ありがとうございます</p>
+            </div>
+        {% endif %}
+        <form class="contact_main" action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>名前：{{form.name}}</p>
+            <p>タイトル：{{form.title}}</p>
+            <p>本文：{{form.body}}</p>
+            <div class="contact_input">
+            <input type="submit" name="contact_input" value="送信"></div>
+        </form>
+        
+    </div>
+    
+{% endblock %}

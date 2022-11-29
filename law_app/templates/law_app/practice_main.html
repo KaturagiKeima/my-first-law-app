@@ -1,0 +1,9 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+
+    <div class="question_start">
+        <h1>
+            <a href="{% url 'practice_question' question.slug %}">問題開始</a>
+        </h1>
+    </div>
+{% endblock %}

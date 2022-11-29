@@ -1,0 +1,14 @@
+{% extends "law_app/layout.html" %}
+{% block fream %}
+{% load boost %}
+
+    <div class="production_form">
+        {% for i , ques in number|zip:question %}
+            <p>問題{{ forloop.counter }}</p>
+            <p>{{ques.question|linebreaksbr}}</p><br>
+        {% endfor %}
+        <div class="production_end">
+            <p><a href="/production_answer/">終了</a></p>
+        </div>
+    </div>
+{% endblock %}
