@@ -16,5 +16,13 @@ $(function() {
 
 });
 
+jQuery('.my-parts').on('click', function() {
+	if(jQuery('.nav.menubar').css('display') === 'block') {
+		jQuery('.nav .menubar').slideUp('1500');
+	}else {
+		jQuery('.nav .menubar').slideDown('1500');
+	}
+});
+
 
     

@@ -7,6 +7,11 @@ Result Skip Results Iframe
 EDIT ON
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 
+header {
+  position: relative;
+  padding: 15px 0 0 0px;
+}
+
 .menubar_main ul{
     padding: right;
 }
@@ -44,6 +49,8 @@ EDIT ON
 .menu_name{
   text-align: right;
 }
+
+
 
 .menubar * {
   box-sizing: border-box;
@@ -224,7 +231,7 @@ EDIT ON
 
 .production_start_a{
   text-align: center;
-  margin: 17% 36%;
+  margin: 17% 31%;
   background-color: white;
 }
 
@@ -264,4 +271,110 @@ EDIT ON
 
 .contact_end{
   color: red;
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav .menubar {
+    display: none;
+    
+    width: 100%;
+  }
+  .main_image h2{
+    position: absolute;
+    color: #dad0ff;
+    font-family: serif;
+    font-size: large;
+    top: 43%;
+    right: 1%;
+  }
+  .nav .menubar .menu a {
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+  }
+  .nav .menubar .menu:last-child a {
+    border-bottom: none;
+  }
+
+  .my-parts {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    position: relative;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1);
+    cursor: pointer;
+  }
+  .my-parts span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 56%;
+    height: 56%;
+    border-radius: 50%;
+    margin: -.28em 0 0 -.28em;
+    border: .12em solid #673AB7;
+  }
+  .my-parts span::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 72%;
+    height: 36%;
+    background: #673AB7;
+    margin: .2em 0 0 .14em;
+    transform: rotate(45deg);
+  }
+  
+}
+
+
+@media screen and (max-width: 768px){
+  body{
+    font-size: small;
+  }
+
+  header {
+    position: relative;
+    padding: 15px 0 0 0px;
+}
+
+  .choice2{
+    border:7px solid white;
+    padding:25px;
+    margin: 0 auto;
+    font-size:1em;
+    width: 75%;
+    border-radius:5px;
+  }
+  .my-parts {
+    display: inline-block;
+  }
+
+  .production_form{
+    border:7px solid rgb(251, 255, 0);
+    padding:25px;
+    margin: 0 auto;
+    font-size:1em;
+    width: 70%;
+    border-radius:5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body{
+    font-size: xx-small;
+  }
+
+  .main_image h2{
+    position: absolute;
+    color: #dad0ff;
+    font-family: serif;
+    font-size: 16px;
+    top: 43%;
+    right: 1%;
+  }
 }
